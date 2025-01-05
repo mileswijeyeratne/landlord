@@ -1,11 +1,15 @@
-#include "../common/main.h"
 #include "raylib.h"
+
+#include "card.h"
+#include <iostream>
 
 int main() {
     // Initialize the window
-    InitWindow(800, 600, "Raylib Client Example");
+	
+	card::Card c = card::Card(1, card::clubs);
+	std::cout << c << std::endl;
 
-    say_hello();
+    InitWindow(800, 600, "Raylib Client Example");
 
     while (!WindowShouldClose()) {
         BeginDrawing();

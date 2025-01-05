@@ -1,0 +1,4 @@
+server.vcxproj
+server.vcxproj.filters
+cmake_install.cmake
+CMakeFiles/

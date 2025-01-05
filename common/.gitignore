@@ -1,0 +1,4 @@
+common.vcxproj
+common.vcxproj.filters
+cmake_install.cmake
+CMakeFiles/

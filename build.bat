@@ -24,6 +24,13 @@ if %errorlevel% neq 0 (
     exit /b %errorlevel%
 )
 
+:: run common tests
+cmake --build . --config %CONFIG% --target common_tests
+if %errorlevel% neq 0 (
+	echo "Common tests failed!"
+    exit /b %errorlevel%
+)
+
 :: build target
 cmake --build . --config %CONFIG% --target %TARGET%
 if %errorlevel% neq 0 (

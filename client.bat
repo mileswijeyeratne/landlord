@@ -6,7 +6,7 @@ set INITIAL_CWD=%CD%
 call build.bat client
 if %ERRORLEVEL% neq 0 (
     echo Error: build.bat failed with code %ERRORLEVEL%.
-    echo Exiting without running the server.
+    echo Exiting without running the client.
     exit /b %ERRORLEVEL%
 )
 
@@ -18,6 +18,6 @@ echo Running client...
 if exist "%CLIENT_PATH%" (
     %CLIENT_PATH%
 ) else (
-    echo Error: server.exe was not found at %CLIENT_PATH%! 
+    echo Error: client.exe was not found at %CLIENT_PATH%! 
     exit /b 1
 )

@@ -17,8 +17,6 @@ std::ostream& operator<<(std::ostream& os, const Card& card) {
 	}
 
 	switch (card.value) {
-		case 1: os << "Ace"; break;
-		case 2: os << "Two"; break;
 		case 3: os << "Three"; break;
 		case 4: os << "Four"; break;
 		case 5: os << "Five"; break;
@@ -27,9 +25,11 @@ std::ostream& operator<<(std::ostream& os, const Card& card) {
 		case 8: os << "Eight"; break;
 		case 9: os << "Nine"; break;
 		case 10: os << "Ten"; break;
-		case 11: os << "Jack"; break;
-		case 12: os << "Queen"; break;
-		case 13: os << "King"; break;
+		case JACK: os << "Jack"; break;
+		case QUEEN: os << "Queen"; break;
+		case KING: os << "King"; break;
+		case ACE: os << "Ace"; break;
+		case TWO: os << "Two"; break;
 		default: os << "Bad val: " << card.value; break;
 	}
 

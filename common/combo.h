@@ -7,6 +7,7 @@ namespace combo {
 
 // https://www.pagat.com/climbing/doudizhu.html
 enum ComboType {
+	invalid,
 	single,
 	pair,
 	triplet,
@@ -17,9 +18,10 @@ enum ComboType {
 	sequence_of_triplets,
 	sequence_of_triplets_with_singles,
 	sequence_of_triplets_with_pairs,
+	quadplex_with_singles,
+	quadplex_with_pairs,
 	bomb,
 	rocket,
-	quadplex,
 };
 
 class Combo {
@@ -27,7 +29,7 @@ public:
 	ComboType combo_type;
 	int rank_value;
 
-	Combo(std::vector<card::Card>);
+	Combo(const std::vector<card::Card>& cards);
 
 	bool beats(const Combo& other);
 };

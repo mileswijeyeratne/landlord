@@ -4,6 +4,12 @@
 
 namespace card {
 
+const int JACK  = 11;
+const int QUEEN = 12;
+const int KING  = 13;
+const int ACE   = 14;
+const int TWO   = 15;
+
 enum Suit {
 	clubs,
 	diamonds,

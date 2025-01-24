@@ -11,7 +11,7 @@ add_library(common STATIC ${common_SRC})
 target_include_directories(common PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 
 # tests
-add_library(common_tests tests/combo.cpp)
+add_executable(common_tests tests/combo.cpp)
 target_link_libraries(common_tests common)
 
 # enable testing
